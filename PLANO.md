@@ -669,9 +669,7 @@ app/[locale]/
 │           └── page.tsx      ← filtro por categoria
 ```
 
-**CMS:** Sanity (MCP já integrado no projeto) — separação de conteúdo do código, autor pode editar sem deploy. Alternativa: MDX local (mais simples, sem CMS, posts viram commits no repo).
-
-Decisão: **Sanity** — escalável pra outras pessoas escreverem no futuro + free tier generoso + queries GROQ.
+**CMS:** Sanity — projeto `csj6iko2` na conta satur@nasus.digital. Separação de conteúdo do código, posts publicados via Sanity Studio ou API. Free tier generoso + queries GROQ.
 
 **Rendering strategy (ISR):**
 
@@ -1129,11 +1127,17 @@ mas `next-intl` é amplamente documentado e não tem breaking changes para o com
 - [ ] Setup tracking manual de citações AI (planilha semanal, 20 keywords-alvo)
 
 **Fase 6 — Blog & Conteúdo (ver Seção 9)**
-- [ ] Decidir CMS final (Sanity recomendado — MCP já integrado)
-- [ ] Implementar estrutura `/blog` + `/blog/[slug]` + `/blog/categoria/[category]`
-- [ ] Layout do post: hero + author byline + TOC + content + author bio + related
-- [ ] Schema `BlogPosting` + `BreadcrumbList` + `FAQPage` quando aplicável
+- [x] Decidir CMS final: **Sanity** (projeto `csj6iko2` na conta satur@nasus.digital)
+- [x] Implementar estrutura `/blog` + `/blog/[slug]` + `/blog/categoria/[category]`
+- [x] Layout do post: hero + author byline + cover image + content + author bio + related posts
+- [x] Schema `BlogPosting` + `BreadcrumbList` em cada post
+- [x] Editorial layout no índice: featured card (post 1) + lista editorial (demais)
+- [x] Markdown table rendering (preprocessor em `PortableTextRenderer`)
+- [x] Post 1 PT: "Site para clínica de estética: o que muda em 2026" (publicado 2026-05-25)
+- [x] Post 1 EN: "Aesthetic Clinic Website in 2026: The Complete Platform Guide" (publicado 2026-05-25)
+- [x] Categorias: "Sites por nicho" (PT) + "Sites by Niche" (EN) no Sanity
+- [x] Vercel env vars atualizadas com novo projeto Sanity (`csj6iko2`)
 - [ ] RSS feed `/feed.xml`
 - [ ] Newsletter (single-field email capture, sem pop-up)
-- [ ] 5 posts iniciais (lista em Section 9.8) — bilíngue PT + EN
+- [ ] Posts 2–5 (lista em Section 9.8) — bilíngue PT + EN
 - [ ] Cadência: 1-2 posts/semana primeiros 3 meses, depois 1/semana
