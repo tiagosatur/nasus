@@ -56,4 +56,7 @@ Secrets necessários no GitHub (`Settings → Secrets → Actions`):
 - `VERCEL_ORG_ID` — ID da organização (Vercel → Settings → General)
 - `VERCEL_PROJECT_ID` — ID do projeto (Vercel → Project → Settings → General)
 
+Variáveis de ambiente na Vercel (`Project → Settings → Environment Variables`):
+- `NEXT_PUBLIC_SENTRY_DSN` — DSN do projeto Sentry (não marcar como Sensitive — é público por design, vai no bundle do browser)
+
 Fluxo: `pnpm install` → `vercel pull` → `vercel build` → `vercel deploy --prebuilt`

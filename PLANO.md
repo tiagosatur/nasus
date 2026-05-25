@@ -1079,17 +1079,29 @@ mas `next-intl` é amplamente documentado e não tem breaking changes para o com
 - [x] Implementar seções: Hero → Problema → Solução → Prova → Processo → Sobre → CTA Final
 - [x] Responsividade (grain desativado mobile, cursor desativado touch)
 - [ ] Atualizar Seção 3 (Solução): Camada 02 com copy de GMB explícito, Camada 03 substituindo LP por AEO/otimização
-- [ ] Configurar meta tags completas, Schema.org, sitemap, OpenGraph
-
+- [x] Configurar meta tags completas, Schema.org, sitemap, OpenGraph
 
 **Fase 3 — Launch**
-- [ ] Configurar DNS Hostinger → Vercel
-- [ ] Deploy e teste de performance (meta: Lighthouse 95+)
-- [ ] Configurar Google Search Console + Business Profile
+- [x] Configurar DNS Hostinger → Vercel (A record `216.198.79.1`)
+- [x] Deploy funcionando via GitHub Actions → Vercel
+- [x] Configurar Google Business Profile
+- [x] Configurar Google Search Console (domínio verificado, sitemap submetido — aguardando re-crawl)
+- [x] Facebook Business Page criada: facebook.com/agencianasus
 - [ ] Atualizar seção de Prova com dados reais assim que fechar o primeiro cliente
 
+**Fase 3.5 — Analytics**
+- [x] Vercel Analytics: `@vercel/analytics` instalado + `<Analytics />` no root layout
+- [x] Google Search Console: domínio verificado, sitemap submetido (re-crawl pendente)
+- [ ] Vercel Speed Insights: `@vercel/speed-insights` + `<SpeedInsights />` no root layout
+- [x] Sentry: erro tracking + Session Replay (gratuito até 5k erros/mês + 50 replays vinculados a erros)
+  - `replaysSessionSampleRate: 0` — não grava sessões normais (preserva cota)
+  - `replaysOnErrorSampleRate: 1.0` — grava 100% das sessões com erro
+  - `NEXT_PUBLIC_SENTRY_DSN` na Vercel — **não marcar como Sensitive** (DSN é público por design, vai no bundle do browser)
+- [ ] Bing Webmaster Tools + IndexNow: indexação imediata a cada deploy
+- [ ] Planilha de citações AI: 20 keywords-alvo testadas semanalmente em ChatGPT/Claude/Gemini (ver Section 8.5)
+
 **Fase 4 — Internacional (ver Seção 12)**
-- [x] Implementar i18n com next-intl (next-intl v4.12.0, proxy.ts — convenção Next.js 16)
+- [x] Implementar i18n com next-intl (middleware.ts com default export)
 - [x] Adaptar copy EN para mercado anglófono (não tradução literal)
 - [x] CTA EN: Calendly popup widget (Free Audit Call) + email contact@nasus.digital
 - [ ] Google Search Console: adicionar propriedade separada para /en
@@ -1100,9 +1112,10 @@ mas `next-intl` é amplamente documentado e não tem breaking changes para o com
 - [x] Schema.org JSON-LD no layout: `Organization` + `Person` (Tiago, sem sameAs por enquanto — caminho B, ver Section 8.3). `LocalBusiness` adiado até ter CNPJ/endereço comercial; `Service` adiado pra page-level.
 - [x] `app/sitemap.ts` automático com `hreflang` PT/EN
 - [x] OpenGraph + Twitter Card completos via `app/[locale]/opengraph-image.tsx` (gera dinâmico via `ImageResponse`, locale-aware) + bloco `twitter` no `generateMetadata`
-- [ ] Submit Google Search Console + Bing Webmaster Tools + IndexNow (depende do deploy em nasus.digital)
+- [x] Google Search Console verificado + sitemap submetido
+- [ ] Bing Webmaster Tools + IndexNow
 - [ ] LinkedIn corporativo da Nasus Digital criado (sameAs da Org). LinkedIn pessoal do Tiago e satur.dev ficam fora do schema da Nasus por enquanto — ver Section 8.3.
-- [ ] Google Business Profile pra Nasus Digital (mesmo remote-first)
+- [x] Google Business Profile configurado (categoria, área de serviço, descrição, WhatsApp)
 - [ ] Setup tracking manual de citações AI (planilha semanal, 20 keywords-alvo)
 
 **Fase 6 — Blog & Conteúdo (ver Seção 9)**
