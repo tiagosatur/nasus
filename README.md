@@ -53,5 +53,7 @@ GitHub Actions → Vercel (free tier). DNS na Hostinger.
 
 Secrets necessários no GitHub (`Settings → Secrets → Actions`):
 - `VERCEL_TOKEN` — token de acesso da Vercel
+- `VERCEL_ORG_ID` — ID da organização (Vercel → Settings → General)
+- `VERCEL_PROJECT_ID` — ID do projeto (Vercel → Project → Settings → General)
 
 Fluxo: `pnpm install` → `vercel pull` → `vercel build` → `vercel deploy --prebuilt`
