@@ -34,10 +34,10 @@ export async function Hero() {
         {t("label")}
       </p>
 
-      <div className="grid lg:grid-cols-[62fr_38fr] gap-12 lg:gap-10 items-start">
+      <div className="grid xl:grid-cols-[62fr_38fr] gap-12 xl:gap-10 items-start">
         <div>
           <h1
-            className="leading-[1.05] lg:leading-[0.97] mb-4"
+            className="leading-[1.05] xl:leading-[0.97] mb-4"
             style={{
               fontSize: "clamp(1.875rem, 5.5vw, 4rem)",
               wordBreak: "keep-all",
@@ -77,7 +77,7 @@ export async function Hero() {
           </div>
         </div>
 
-        <div data-hero-mockup className="hidden lg:block" style={{ opacity: 0 }}>
+        <div data-hero-mockup className="hidden xl:block" style={{ opacity: 0 }}>
           <SearchMockup />
         </div>
       </div>
