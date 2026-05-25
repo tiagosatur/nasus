@@ -9,6 +9,7 @@ import { routing } from "@/i18n/routing";
 import { buildSchemas } from "@/lib/jsonLd";
 import "../globals.css";
 import { CustomCursor } from "@/components/ui/CustomCursor";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -128,6 +129,7 @@ export default async function LocaleLayout({
             strategy="afterInteractive"
           />
         )}
+        <Analytics />
       </body>
     </html>
   );
