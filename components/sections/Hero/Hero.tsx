@@ -34,13 +34,12 @@ export async function Hero() {
         {t("label")}
       </p>
 
-      <div className="grid lg:grid-cols-[62fr_38fr] gap-12 lg:gap-10 items-start">
+      <div className="grid lg:grid-cols-[68fr_32fr] gap-12 lg:gap-10 items-start">
         <div>
           <h1
             className="leading-[1.05] lg:leading-[0.97] mb-4"
             style={{
               fontSize: "clamp(1.875rem, 5.5vw, 4rem)",
-              wordBreak: "keep-all",
               hyphens: "none",
             }}
           >
