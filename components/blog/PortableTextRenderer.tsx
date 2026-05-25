@@ -14,6 +14,60 @@ interface ImageValue extends SanityImage {
   caption?: string
 }
 
+interface RawBlock {
+  _type: string
+  _key?: string
+  style?: string
+  children?: Array<{ text: string; marks?: string[] }>
+}
+
+interface MarkdownTableBlock {
+  _type: 'markdownTable'
+  _key: string
+  rows: string[][]
+}
+
+// Groups consecutive pipe-delimited text blocks into table nodes
+function preprocessBody(body: unknown[]): unknown[] {
+  const result: unknown[] = []
+  let tableRows: string[][] = []
+  let tableKey = ''
+
+  const flushTable = () => {
+    if (tableRows.length === 0) return
+    result.push({ _type: 'markdownTable', _key: tableKey, rows: tableRows } as MarkdownTableBlock)
+    tableRows = []
+    tableKey = ''
+  }
+
+  for (const block of body) {
+    const b = block as RawBlock
+    if (b._type !== 'block' || !b.children || b.style !== 'normal') {
+      flushTable()
+      result.push(block)
+      continue
+    }
+
+    const text = b.children.map(c => c.text ?? '').join('').trim()
+    const isSeparator = /^\|[-| :]+\|$/.test(text)
+    const isTableRow = text.startsWith('|') && text.endsWith('|') && text.length > 2
+
+    if (isSeparator) continue // skip `|---|---|` rows
+
+    if (isTableRow) {
+      if (tableRows.length === 0) tableKey = b._key ?? String(result.length)
+      const cells = text.slice(1, -1).split('|').map(c => c.trim())
+      tableRows.push(cells)
+    } else {
+      flushTable()
+      result.push(block)
+    }
+  }
+
+  flushTable()
+  return result
+}
+
 const components = {
   types: {
     image: ({ value }: { value: ImageValue }) => {
@@ -42,6 +96,39 @@ const components = {
         </code>
       </pre>
     ),
+    markdownTable: ({ value }: { value: MarkdownTableBlock }) => {
+      const [header, ...body] = value.rows
+      if (!header) return null
+      return (
+        <div className="my-8 overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b-2 border-border">
+                {header.map((cell, i) => (
+                  <th
+                    key={i}
+                    className="text-left py-2 px-4 font-semibold text-text-primary bg-bg-secondary first:pl-0 last:pr-0"
+                  >
+                    {cell}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {body.map((row, ri) => (
+                <tr key={ri} className="border-b border-border hover:bg-bg-secondary/50 transition-colors">
+                  {row.map((cell, ci) => (
+                    <td key={ci} className="py-2.5 px-4 text-text-secondary first:pl-0 last:pr-0">
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )
+    },
   },
   block: {
     h2: ({ children }: { children?: React.ReactNode }) => (
@@ -108,9 +195,10 @@ const components = {
 }
 
 export function PortableTextRenderer({ body }: { body: unknown[] }) {
+  const processed = preprocessBody(body)
   return (
     <div className="prose-nasus">
-      <PortableText value={body as Parameters<typeof PortableText>[0]['value']} components={components} />
+      <PortableText value={processed as Parameters<typeof PortableText>[0]['value']} components={components} />
     </div>
   )
 }

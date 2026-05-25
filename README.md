@@ -92,3 +92,9 @@ Variáveis de ambiente na Vercel (`Project → Settings → Environment Variable
 - `SANITY_API_READ_TOKEN` — token de leitura do Sanity
 
 Fluxo: `pnpm install` → `vercel pull` → `vercel build` → `vercel deploy --prebuilt`
+
+Serviços:
+- Sentry: https://nasus-digital.sentry.io
+- https://www.sanity.io
+- Google Search Console (GSC): https://search.google.com/search-console
+- Vercel: https://vercel.com/tiagosaturs-projects/nasus
