@@ -87,7 +87,7 @@ export function Header() {
     <header
       className={`${styles.header} fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${hidden ? "-translate-y-full md:translate-y-0" : "translate-y-0"}`}
     >
-      <div className="max-w-6xl mx-auto px-6 md:px-0 grid grid-cols-[auto_1fr_auto] items-center">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 grid grid-cols-[auto_1fr_auto] items-center">
         <Link href="/" aria-label="nasus.digital" className="block" onClick={onLogoClick}>
           <Image
             src="/logo.svg"
