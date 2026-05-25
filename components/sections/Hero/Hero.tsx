@@ -77,7 +77,7 @@ export async function Hero() {
           </div>
         </div>
 
-        <div data-hero-mockup className="hidden lg:block">
+        <div data-hero-mockup className="hidden lg:block" style={{ opacity: 0 }}>
           <SearchMockup />
         </div>
       </div>

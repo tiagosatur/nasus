@@ -55,9 +55,10 @@ export function HeroAnimations() {
       "-=0.4"
     );
 
-    tl.from(
+    tl.fromTo(
       q("[data-hero-mockup]"),
-      { opacity: 0, x: 24, duration: 0.9, ease: "power2.out" },
+      { opacity: 0, x: 24 },
+      { opacity: 1, x: 0, duration: 0.9, ease: "power2.out" },
       "-=0.9"
     );
   });
