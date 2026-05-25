@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# nasus.digital
 
-## Getting Started
+Site institucional da [Nasus Digital](https://nasus.digital) — presença digital para profissionais liberais brasileiros.
 
-First, run the development server:
+## Stack
+
+- **Next.js 15** + TypeScript + App Router
+- **Tailwind CSS v4**
+- **GSAP 3** (SplitText, ScrollTrigger)
+- **next-intl** — i18n pt-BR / en
+- **Vercel** (deploy) · DNS na Hostinger
+
+## Dev
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm dev      # localhost:3000
+pnpm build
+pnpm lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Estrutura
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+app/
+  [locale]/       # Rotas pt (/) e en (/en)
+    layout.tsx
+    page.tsx
+  globals.css     # Design tokens + base styles
+components/
+  layout/
+    Header/       # Header.tsx + Header.module.css
+    Footer.tsx
+  sections/       # Hero, Problem, Solution, Proof, Process, About, FinalCTA
+  ui/             # Button, WhatsAppIcon, BookButton, CustomCursor, GoldLine
+lib/
+  jsonLd.ts       # Schema.org Organization + Person
+  gsap.ts
+  whatsapp.ts
+messages/         # Traduções pt.json / en.json
+i18n/             # Configuração next-intl
+public/
+  logo.svg
+  logo-on-dark.svg
+  tiago4.webp
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Push para `main` dispara deploy automático na Vercel.
