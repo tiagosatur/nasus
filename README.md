@@ -46,4 +46,12 @@ public/
 
 ## Deploy
 
-Push para `main` dispara deploy automático na Vercel.
+GitHub Actions → Vercel (free tier). DNS na Hostinger.
+
+- Push para `main` → deploy em produção (`nasus.digital`)
+- Pull request → deploy de preview
+
+Secrets necessários no GitHub (`Settings → Secrets → Actions`):
+- `VERCEL_TOKEN` — token de acesso da Vercel
+
+Fluxo: `pnpm install` → `vercel pull` → `vercel build` → `vercel deploy --prebuilt`
