@@ -39,7 +39,7 @@ export async function Hero() {
           <h1
             className="leading-[1.05] lg:leading-[0.97] mb-4"
             style={{
-              fontSize: "clamp(1.875rem, 5.5vw, 4rem)",
+              fontSize: "clamp(1.875rem, 4vw, 4rem)",
               hyphens: "none",
             }}
           >
