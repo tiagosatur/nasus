@@ -1,0 +1,38 @@
+.header {
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+@supports (animation-timeline: scroll()) {
+  .header {
+    animation: header-scrolled linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0px 80px;
+  }
+
+  @keyframes header-scrolled {
+    from {
+      background-color: transparent;
+      border-bottom-color: transparent;
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+    }
+    to {
+      background-color: #EDEAE5;
+      border-bottom-color: #DDD8D6;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+  }
+}
+
+@supports not (animation-timeline: scroll()) {
+  .header {
+    background-color: #EDEAE5;
+    border-bottom-color: #DDD8D6;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}

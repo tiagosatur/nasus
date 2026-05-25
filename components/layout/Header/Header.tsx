@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import styles from "./Header.module.css";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, useRouter, usePathname } from "@/navigation";
 import { Button } from "@/components/ui/Button";
@@ -23,7 +24,6 @@ export function Header() {
   const pathname = usePathname();
   const isEn = locale === "en";
 
-  const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [activeId, setActiveId] = useState<string>("");
   const lastYRef = useRef(0);
@@ -32,8 +32,6 @@ export function Header() {
     const onScroll = () => {
       const currentY = window.scrollY;
       const lastY = lastYRef.current;
-
-      setScrolled(currentY > 40);
 
       if (currentY > lastY && currentY > 100) {
         setHidden(true);
@@ -44,7 +42,7 @@ export function Header() {
       lastYRef.current = currentY;
     };
 
-    onScroll();
+    lastYRef.current = window.scrollY;
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -87,11 +85,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${hidden ? "-translate-y-full md:translate-y-0" : "translate-y-0"
-        } ${scrolled
-          ? "bg-bg-primary border-b border-border py-3"
-          : "bg-transparent py-5"
-        }`}
+      className={`${styles.header} fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${hidden ? "-translate-y-full md:translate-y-0" : "translate-y-0"}`}
     >
       <div className="max-w-6xl mx-auto px-6 md:px-0 grid grid-cols-[auto_1fr_auto] items-center">
         <Link href="/" aria-label="nasus.digital" className="block" onClick={onLogoClick}>
