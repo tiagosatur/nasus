@@ -5,7 +5,6 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { PortableTextRenderer } from '@/components/blog/PortableTextRenderer'
 import { PostCard } from '@/components/blog/PostCard'
-import { CategoryBar } from '@/components/blog/CategoryBar'
 import { getPostBySlug, getAllPostSlugs, getAllPosts, getAllCategories } from '@/lib/sanity/queries'
 import { urlFor } from '@/lib/sanity/image'
 import { Link } from '@/navigation'
@@ -114,7 +113,6 @@ export default async function PostPage({ params }: Props) {
       />
       <Header />
       <main className="bg-bg-primary pt-[104px]">
-        <CategoryBar />
         {/* Post hero */}
         <article>
           <header className="pt-10 pb-12 px-6 md:px-12">

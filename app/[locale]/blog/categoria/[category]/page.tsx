@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { PostCard } from '@/components/blog/PostCard'
-import { CategoryBar } from '@/components/blog/CategoryBar'
 import { getPostsByCategory, getAllCategories } from '@/lib/sanity/queries'
 import { Link } from '@/navigation'
 import type { Metadata } from 'next'
@@ -44,7 +43,6 @@ export default async function CategoryPage({ params }: Props) {
       <Header />
       <main className="bg-bg-primary flex-1 flex flex-col pt-[104px]">
 
-        <CategoryBar />
 
         {/* Cabeçalho */}
         <div className="px-6 md:px-12 lg:px-24 pt-10 pb-10">

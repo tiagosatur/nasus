@@ -2,7 +2,6 @@ import { getTranslations, getLocale } from 'next-intl/server'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { PostCard } from '@/components/blog/PostCard'
-import { CategoryBar } from '@/components/blog/CategoryBar'
 import { getAllPosts, getAllCategories } from '@/lib/sanity/queries'
 import { Link } from '@/navigation'
 import type { Metadata } from 'next'
@@ -36,7 +35,6 @@ export default async function BlogPage() {
       <Header />
       <main className="bg-bg-primary flex-1 flex flex-col pt-[104px]">
 
-        <CategoryBar />
 
         {/* Cabeçalho da página */}
         <div className="px-6 md:px-12 lg:px-24 pt-10 pb-10">
