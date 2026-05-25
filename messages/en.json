@@ -1,0 +1,200 @@
+{
+  "header": {
+    "nav": {
+      "solucao": "Services",
+      "prova": "Results",
+      "comoFunciona": "How it works",
+      "sobre": "About"
+    },
+    "cta": "Free audit",
+    "langSwitch": "PT"
+  },
+  "footer": {
+    "location": "Curitiba, Brazil — Serving clients worldwide",
+    "email": "contact@nasus.digital",
+    "privacy": "Privacy Policy"
+  },
+  "hero": {
+    "label": "Nasus Digital",
+    "line1": "Your competitor ranks #1 on Google.",
+    "line2": "You're not even close.",
+    "sub": "Modern websites that rank, convert, and bring real patients. For clinics, law firms, and practitioners who take their business seriously.",
+    "cta1": "Check my Google presence",
+    "cta2": "See how it works",
+    "mockupLabel": "Searched just now",
+    "notFound": "You don't appear here.",
+    "notFoundSub": "Clients hire whoever shows up.",
+    "queries": [
+      {
+        "query": "dental implants near Chicago",
+        "results": [
+          { "domain": "loopdentalchicago.com", "title": "Dental Implants Chicago | Loop Dental", "desc": "Titanium implants with lifetime warranty. Free consultation. Over 3,000 implants placed in Chicago." },
+          { "domain": "michiganavesmiles.com", "title": "Implants Chicago — Free Consultation", "desc": "Same-day implant consultations available. Financing options. Board-certified implant specialists." },
+          { "domain": "chicagodentalgroup.com", "title": "Dental Implants | Same-Day Appointments", "desc": "Full-arch and single tooth implants. Flexible scheduling, evenings and weekends available." }
+        ]
+      },
+      {
+        "query": "employment lawyer near me",
+        "results": [
+          { "domain": "smithlaborlaw.com", "title": "Employment Lawyer | Smith & Associates", "desc": "20+ years fighting for workers' rights. Wrongful termination, discrimination, wage claims. Free case review." },
+          { "domain": "workrightslegal.com", "title": "Labor Law Firm — Free Case Review", "desc": "Specialized employment law firm. No fee unless we win. Available 24/7 for urgent matters." },
+          { "domain": "employmentattorney.com", "title": "Employment Attorney | 24h Response", "desc": "Protecting employees across Illinois. FLSA violations, harassment, severance negotiation. Call now." }
+        ]
+      },
+      {
+        "query": "medical spa Miami",
+        "results": [
+          { "domain": "coralmedispa.com", "title": "Medical Spa Miami | Coral Aesthetics", "desc": "Botox, fillers, laser treatments and body contouring. Board-certified physicians. Book online today." },
+          { "domain": "brickellaesthetics.com", "title": "Brickell MedSpa — Book Online Today", "desc": "Advanced aesthetic treatments in Brickell. Natural-looking results. New patient specials available." },
+          { "domain": "southbeachskin.com", "title": "Miami MedSpa | Expert Treatments", "desc": "Medical-grade skincare and injectables in South Beach. Over 10,000 satisfied patients since 2012." }
+        ]
+      }
+    ]
+  },
+  "problem": {
+    "sectionLabel": "The Problem",
+    "headline": "This afternoon, someone in your area searched for your service.",
+    "headlineAccent": " They called your competitor.",
+    "painPoints": [
+      {
+        "num": "01",
+        "impact": "Trapped",
+        "text": "You rely on referrals. When the referrals stop, so does the revenue."
+      },
+      {
+        "num": "02",
+        "impact": "Invisible",
+        "text": "You've googled your own service. You know what you found — and what you didn't."
+      },
+      {
+        "num": "03",
+        "impact": "Wasted",
+        "text": "You've tried agencies or went all-in on Instagram. You got likes. Not clients."
+      }
+    ],
+    "bridge": "It's not a lack of skill.",
+    "bridgeAccent": " It's a lack of visibility.",
+    "bridgeSub": "Your competitor isn't necessarily better. They just show up when your client searches — and you don't.",
+    "channelsIntro": "In the two places your clients search today:",
+    "googleChannel": "Google Search",
+    "aiChannel": "AI Assistants",
+    "googleQuery": "employment lawyer Chicago",
+    "googleResults": [
+      { "domain": "smithlaborlaw.com", "title": "Employment Lawyer Chicago | Smith Law" },
+      { "domain": "workrightslegal.com", "title": "Labor Law — Free Case Review" },
+      { "domain": "employmentattorney.com", "title": "Employment Attorney | 24h Response" }
+    ],
+    "notFoundGoogle": "You don't appear here.",
+    "googleFootnote": "The first page gets over 90% of clicks. If you're not there, you don't exist.",
+    "aiQuestion": "Which dentist is the best for implants in Miami?",
+    "aiAnswer": "Top-rated options in Miami:",
+    "aiNames": ["Coral Implant Center", "Dr. Rivera Dental", "Miami Smile Institute"],
+    "aiPlaceholder": "Ask anything",
+    "notFoundAi": "You're not mentioned here.",
+    "aiFootnotePre": "ChatGPT, Gemini, and Claude recommend those with strong digital authority. Without",
+    "aiFootnotePost": "you won't be cited.",
+    "aeo": "AEO,"
+  },
+  "solution": {
+    "sectionLabel": "The Solution",
+    "headline": "A complete digital presence system.",
+    "tagline": "Each layer works on its own — and even better together.",
+    "cards": [
+      {
+        "num": "01",
+        "label": "Foundation",
+        "title": "A website that works while you treat patients",
+        "body": "Professional, fast, and optimized. PageSpeed 95+ guaranteed, responsive on all devices. The foundation that validates everything that comes after.",
+        "tags": ["PageSpeed 95+", "Mobile-first", "SSL + security"],
+        "resultLabel": "Result",
+        "result": "Visitors who land on your site stay and reach out."
+      },
+      {
+        "num": "02",
+        "label": "Discovery",
+        "title": "Ahead of competitors when it matters most",
+        "body": "Local SEO and Google Business Profile so you appear in search and on the map — the two places where someone who needs your service decides who to call.",
+        "tags": ["Local SEO", "Google Business Profile", "Google Maps"],
+        "resultLabel": "Result",
+        "result": "Your name before your competitor at the highest-intent moment."
+      },
+      {
+        "num": "03",
+        "label": "Authority",
+        "title": "You become the go-to expert in your area.",
+        "body": "AEO so ChatGPT, Gemini, and Claude cite you as a reference. Continuous optimization with monthly reporting to keep growing.",
+        "tags": ["AI Answer Engine", "Monthly reports", "Continuous optimization"],
+        "resultLabel": "Result",
+        "result": "Recommended even by people who haven't met you yet."
+      }
+    ]
+  },
+  "proof": {
+    "sectionLabel": "Real data",
+    "headline": "We measure the market before entering it.",
+    "tagline": "Before any proposal, we analyze your city, your competitors, and your current position.",
+    "stats": [
+      { "value": 200, "suffix": "+", "label": "businesses analyzed", "sublabel": "across Brazilian cities" },
+      { "value": 78, "suffix": "%", "label": "invisible on Google", "sublabel": "outside the first page" },
+      { "value": 3.2, "suffix": "×", "label": "more contacts received", "sublabel": "with active local SEO" }
+    ]
+  },
+  "process": {
+    "sectionLabel": "How it works",
+    "headline": "From audit to",
+    "headlineAccent": "new clients",
+    "headlineEnd": " in weeks.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Free visibility audit",
+        "body": "We analyze your website, your current Google ranking, and what your competitors are doing. You receive a real report within 24 hours."
+      },
+      {
+        "num": "02",
+        "title": "Personalized plan",
+        "body": "Based on the audit, we put together a proposal with what makes sense for your practice, city, and budget."
+      },
+      {
+        "num": "03",
+        "title": "Execution and results",
+        "body": "We put the plan into action. You track progress via monthly reports. Your site starts climbing Google within weeks."
+      }
+    ],
+    "cta": "I want my free audit",
+    "ctaFootnote": "Free, no commitment. Response within 24 hours."
+  },
+  "about": {
+    "sectionLabel": "About",
+    "headline": "No agency in between.",
+    "photoAlt": "Tiago Satur — founder of Nasus Digital",
+    "photoName": "Tiago Satur",
+    "photoTitle": "Software Engineer",
+    "p1": "I'm a software engineer with a decade of experience working with high-performance technology teams. I decided to apply that knowledge to help real businesses grow online.",
+    "p2": "You talk directly with me — from the first audit to the site going live. No account managers, no handoffs to someone else mid-project.",
+    "p3": "Every delivery meets the same technical standard I apply to large-scale projects — fast website, strong Google rankings, and mobile-ready from the first visit.",
+    "tags": ["Ultra-fast website", "Perfect mobile", "Google page 1", "On-time delivery", "Monthly reports"]
+  },
+  "finalCta": {
+    "sectionLabel": "Free audit",
+    "headline": "Ready to show up on Google?",
+    "sub": "See exactly what's keeping your clients from finding you.",
+    "cta": "Book a free audit",
+    "guarantees": [
+      { "label": "Response within 24h", "desc": "Audit delivered on the next business day." },
+      { "label": "No commitment", "desc": "Zero obligation to hire after the audit." },
+      { "label": "100% free", "desc": "No cost, no credit card required." }
+    ]
+  },
+  "privacy": {
+    "backLink": "← Back to site",
+    "title": "Privacy Policy",
+    "updated": "Updated May 16, 2026"
+  },
+  "metadata": {
+    "title": "Nasus Digital — Websites & SEO for Health & Legal Professionals",
+    "description": "Get found on Google and attract more clients. Fast websites, local SEO, and continuous digital presence for clinics, law firms, and independent practitioners.",
+    "ogTitle": "Nasus Digital",
+    "ogDescription": "Websites that rank, convert, and bring real clients."
+  }
+}

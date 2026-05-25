@@ -1,0 +1,200 @@
+{
+  "header": {
+    "nav": {
+      "solucao": "O que faço",
+      "prova": "Resultados",
+      "comoFunciona": "Como funciona",
+      "sobre": "Quem sou"
+    },
+    "cta": "Diagnóstico grátis",
+    "langSwitch": "EN"
+  },
+  "footer": {
+    "location": "Curitiba, PR — Atendimento em todo o Brasil",
+    "email": "contato@nasus.digital",
+    "privacy": "Política de Privacidade"
+  },
+  "hero": {
+    "label": "Nasus Digital",
+    "line1": "Seu concorrente está",
+    "line2": "na primeira página.",
+    "sub": "Sites que ranqueiam, convertem e trazem clientes reais. Para advogados, dentistas, clínicas e consultórios que levam o negócio a sério.",
+    "cta1": "Ver se apareço no Google",
+    "cta2": "Ver como funciona",
+    "mockupLabel": "Pesquisa feita agora mesmo",
+    "notFound": "Você não aparece aqui.",
+    "notFoundSub": "Clientes contratam quem aparece.",
+    "queries": [
+      {
+        "query": "dentista implante em São Paulo",
+        "results": [
+          { "domain": "clinicaoral-sp.com.br", "title": "Dentista Implante em SP | Clínica Oral", "desc": "Implante de titânio com garantia. Avaliação gratuita. Mais de 2.000 implantes realizados em SP." },
+          { "domain": "sorrisoperfeito.com.br", "title": "Implante Dentário SP — Consulta Grátis", "desc": "Especialistas em implantes e próteses. Parcelamos em até 24x. Agende sua consulta hoje." },
+          { "domain": "odontoespecialista.com", "title": "Dentista Implante SP | Atend. Imediato", "desc": "Clínica odontológica completa em São Paulo. Implantes, facetas e ortodontia. Horários flexíveis." }
+        ]
+      },
+      {
+        "query": "advogado trabalhista em Brasília",
+        "results": [
+          { "domain": "escritoriocosta-bsb.adv.br", "title": "Advogado Trabalhista BSB | Dr. Costa", "desc": "15 anos defendendo direitos trabalhistas em Brasília. Rescisão, FGTS, horas extras. Consulta inicial gratuita." },
+          { "domain": "advocaciabsb.com.br", "title": "Direito do Trabalho em BSB — Consulta", "desc": "Escritório especializado em direito trabalhista e previdenciário. Atendemos presencialmente e online." },
+          { "domain": "advbrasilia.com.br", "title": "Advogado Trabalhista BSB | Atend. 24h", "desc": "Defesa em processos trabalhistas, negociações e acordos. Honorários só no êxito. Fale agora." }
+        ]
+      },
+      {
+        "query": "clínica estética em Curitiba",
+        "results": [
+          { "domain": "esteticacwb.com.br", "title": "Clínica Estética Curitiba | Tratamentos", "desc": "Botox, preenchimento, bioestimulador e laser. Médicos especialistas. Agende sua avaliação em CWB." },
+          { "domain": "belezacuritiba.com.br", "title": "Estética Avançada CWB — Agende Agora", "desc": "Tratamentos estéticos avançados em Curitiba. Harmonização facial, fios de PDO e muito mais." },
+          { "domain": "clinicaestetica-cwb.com", "title": "Estética Facial Curitiba | Resultados", "desc": "Clínica médica estética em Curitiba com foco em resultados naturais. Mais de 5.000 pacientes atendidos." }
+        ]
+      }
+    ]
+  },
+  "problem": {
+    "sectionLabel": "O Problema",
+    "headline": "Hoje à tarde, alguém na sua cidade buscou o seu serviço.",
+    "headlineAccent": " E ligou para o concorrente.",
+    "painPoints": [
+      {
+        "num": "01",
+        "impact": "Refém",
+        "text": "Você vive de indicação. Quando para de indicar, para de chegar."
+      },
+      {
+        "num": "02",
+        "impact": "Invisível",
+        "text": "Já pesquisou seu próprio serviço no Google. Sabe o que achou — e o que não achou."
+      },
+      {
+        "num": "03",
+        "impact": "Desperdiçado",
+        "text": "Já pagou agência ou apostou no Instagram. Veio curtida. Não veio cliente."
+      }
+    ],
+    "bridge": "Não é falta de competência.",
+    "bridgeAccent": " É falta de presença.",
+    "bridgeSub": "Seu concorrente não é necessariamente melhor. Só aparece quando seu cliente busca — e você não.",
+    "channelsIntro": "Nos dois lugares onde seu cliente busca hoje:",
+    "googleChannel": "Google Search",
+    "aiChannel": "Inteligência Artificial",
+    "googleQuery": "advogado trabalhista em São Paulo",
+    "googleResults": [
+      { "domain": "escritorio-costa.adv.br", "title": "Advogado Trabalhista em SP | Dr. Costa" },
+      { "domain": "advocaciabrasil.com.br", "title": "Direito do Trabalho — Consulta Grátis" },
+      { "domain": "advjuridico.com", "title": "Advogado Trabalhista | Atendimento 24h" }
+    ],
+    "notFoundGoogle": "Você não aparece aqui.",
+    "googleFootnote": "A primeira página leva mais de 90% dos cliques. Quem não aparece não existe.",
+    "aiQuestion": "Qual dentista é referência em implante em Belo Horizonte?",
+    "aiAnswer": "Algumas referências em BH:",
+    "aiNames": ["Clínica Oral BH", "Dr. Mendes Odontologia", "Instituto Dental Minas"],
+    "aiPlaceholder": "Pergunte qualquer coisa",
+    "notFoundAi": "Você não é citado aqui.",
+    "aiFootnotePre": "ChatGPT, Gemini e Claude recomendam quem tem presença digital forte. Sem",
+    "aiFootnotePost": "você não é citado.",
+    "aeo": "AEO,"
+  },
+  "solution": {
+    "sectionLabel": "A Solução",
+    "headline": "Um sistema completo de presença digital.",
+    "tagline": "Cada camada funciona sozinha — e ainda melhor em conjunto.",
+    "cards": [
+      {
+        "num": "01",
+        "label": "Fundação",
+        "title": "Um site que trabalha enquanto você atende",
+        "body": "Profissional, rápido e otimizado. PageSpeed 95+ garantido, responsivo em todos os dispositivos. A base que credencia tudo o que vem depois.",
+        "tags": ["PageSpeed 95+", "Mobile-first", "SSL + segurança"],
+        "resultLabel": "Resultado",
+        "result": "Quem chega ao site fica e entra em contato."
+      },
+      {
+        "num": "02",
+        "label": "Descoberta",
+        "title": "Na frente do concorrente no momento que importa",
+        "body": "SEO local e Google Meu Negócio para você aparecer na busca e no mapa — os dois lugares onde alguém que precisa do seu serviço decide quem vai ligar.",
+        "tags": ["SEO local", "Google Meu Negócio", "Google Maps"],
+        "resultLabel": "Resultado",
+        "result": "Seu nome antes do concorrente no momento de maior intenção de compra."
+      },
+      {
+        "num": "03",
+        "label": "Autoridade",
+        "title": "Você vira referência na sua cidade.",
+        "body": "AEO para que ChatGPT, Gemini e Claude te citem como referência. Otimização contínua com relatório mensal para crescer sem parar.",
+        "tags": ["AEO para IAs", "Relatório mensal", "Otimização contínua"],
+        "resultLabel": "Resultado",
+        "result": "Ser recomendado mesmo por quem ainda não te conhece."
+      }
+    ]
+  },
+  "proof": {
+    "sectionLabel": "Dados reais",
+    "headline": "Medimos o mercado antes de entrar nele.",
+    "tagline": "Antes de qualquer proposta, analisamos sua cidade, seus concorrentes e sua posição atual.",
+    "stats": [
+      { "value": 200, "suffix": "+", "label": "negócios analisados", "sublabel": "em cidades brasileiras" },
+      { "value": 78, "suffix": "%", "label": "invisíveis no Google", "sublabel": "fora da primeira página" },
+      { "value": 3.2, "suffix": "×", "label": "mais contatos recebidos", "sublabel": "com SEO local ativo" }
+    ]
+  },
+  "process": {
+    "sectionLabel": "Como funciona",
+    "headline": "Do diagnóstico aos",
+    "headlineAccent": "novos clientes",
+    "headlineEnd": " em semanas.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Diagnóstico gratuito",
+        "body": "Analisamos seu site, sua posição atual no Google e o que seus concorrentes estão fazendo. Em 24h você recebe um relatório real."
+      },
+      {
+        "num": "02",
+        "title": "Plano personalizado",
+        "body": "Com base no diagnóstico, montamos uma proposta com o que faz mais sentido para o seu negócio, cidade e orçamento."
+      },
+      {
+        "num": "03",
+        "title": "Execução e resultado",
+        "body": "Colocamos em prática. Você acompanha por relatório mensal. Seu site começa a subir no Google dentro de semanas."
+      }
+    ],
+    "cta": "Quero meu diagnóstico gratuito",
+    "ctaFootnote": "Gratuito, sem compromisso. Resposta em até 24h."
+  },
+  "about": {
+    "sectionLabel": "Sobre",
+    "headline": "Sem agência no meio.",
+    "photoAlt": "Tiago Satur — fundador da Nasus Digital",
+    "photoName": "Tiago Satur",
+    "photoTitle": "Engenheiro de Software",
+    "p1": "Sou engenheiro de software com uma década de experiência trabalhando com times de tecnologia de alto nível. Decidi usar esse conhecimento para ajudar negócios reais a crescerem online.",
+    "p2": "Você fala diretamente comigo — do primeiro diagnóstico até o site no ar. Sem passar por atendente, sem ser repassado para outra pessoa no meio do projeto.",
+    "p3": "Cada entrega tem o mesmo padrão técnico que aplico em projetos de grande escala — site rápido, bem posicionado no Google e que funciona no celular desde o primeiro acesso.",
+    "tags": ["Site ultrarrápido", "Mobile perfeito", "1ª página do Google", "Entrega no prazo", "Relatório mensal"]
+  },
+  "finalCta": {
+    "sectionLabel": "Diagnóstico gratuito",
+    "headline": "Pronto para aparecer no Google?",
+    "sub": "Veja exatamente o que está impedindo seus clientes de te encontrar.",
+    "cta": "Falar no WhatsApp agora",
+    "guarantees": [
+      { "label": "Resposta em até 24h", "desc": "Diagnóstico enviado no próximo dia útil." },
+      { "label": "Sem compromisso", "desc": "Nenhuma obrigação de contratar depois." },
+      { "label": "100% gratuito", "desc": "Zero custo, sem cartão de crédito." }
+    ]
+  },
+  "privacy": {
+    "backLink": "← Voltar ao site",
+    "title": "Política de Privacidade",
+    "updated": "Atualizado em 16 de maio de 2026"
+  },
+  "metadata": {
+    "title": "Nasus Digital — Sites e Presença no Google para Profissionais",
+    "description": "Apareça na 1ª página do Google e atraia mais clientes. Sites modernos, SEO local e presença contínua para clínicas, advogados e profissionais liberais.",
+    "ogTitle": "Nasus Digital",
+    "ogDescription": "Sites que ranqueiam, convertem e trazem clientes reais."
+  }
+}
