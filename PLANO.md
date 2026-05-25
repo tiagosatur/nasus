@@ -673,6 +673,16 @@ app/[locale]/
 
 Decisão: **Sanity** — escalável pra outras pessoas escreverem no futuro + free tier generoso + queries GROQ.
 
+**Rendering strategy (ISR):**
+
+| Rota | Estratégia | `revalidate` |
+|---|---|---|
+| `/blog` (índice) | ISR | 300s (5 min) |
+| `/blog/[slug]` (post) | SSG + ISR | 3600s (1h) |
+| `/blog/categoria/[cat]` | ISR | 300s (5 min) |
+
+Posts novos publicados no Sanity aparecem no site após o intervalo de revalidação, sem necessidade de redeploy. O post individual usa SSG com `generateStaticParams` — slugs existentes no build são pré-gerados; slugs novos são gerados no primeiro acesso e depois cacheados por 1h.
+
 ### 9.3 Categorias iniciais
 
 Categorias derivadas da pesquisa real de SERP (ver Section 9.10). Cada categoria mira um cluster de queries com oportunidade editorial mensurada.

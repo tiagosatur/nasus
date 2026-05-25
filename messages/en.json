@@ -4,7 +4,8 @@
       "solucao": "Services",
       "prova": "Results",
       "comoFunciona": "How it works",
-      "sobre": "About"
+      "sobre": "About",
+      "blog": "Blog"
     },
     "cta": "Free audit",
     "langSwitch": "PT"
@@ -196,5 +197,21 @@
     "description": "Get found on Google and attract more clients. Fast websites, local SEO, and continuous digital presence for clinics, law firms, and independent practitioners.",
     "ogTitle": "Nasus Digital",
     "ogDescription": "Websites that rank, convert, and bring real clients."
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Practical guides on websites, SEO, and digital presence for independent practitioners.",
+    "readMore": "Read article",
+    "readingTime": "{minutes} min read",
+    "publishedAt": "Published on",
+    "allCategories": "All",
+    "noPosts": "No posts published yet. Check back soon.",
+    "backToBlog": "← Back to blog",
+    "relatedPosts": "Related posts",
+    "ctaTitle": "Ready to rank on Google?",
+    "ctaDescription": "Free visibility audit — no commitment.",
+    "ctaButton": "Book a free audit",
+    "authorBy": "By",
+    "categoryLabel": "Category"
   }
 }

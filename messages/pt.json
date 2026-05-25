@@ -4,7 +4,8 @@
       "solucao": "O que faço",
       "prova": "Resultados",
       "comoFunciona": "Como funciona",
-      "sobre": "Quem sou"
+      "sobre": "Quem sou",
+      "blog": "Blog"
     },
     "cta": "Diagnóstico grátis",
     "langSwitch": "EN"
@@ -196,5 +197,21 @@
     "description": "Apareça na 1ª página do Google e atraia mais clientes. Sites modernos, SEO local e presença contínua para clínicas, advogados e profissionais liberais.",
     "ogTitle": "Nasus Digital",
     "ogDescription": "Sites que ranqueiam, convertem e trazem clientes reais."
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Guias práticos sobre sites, SEO e presença digital para profissionais liberais.",
+    "readMore": "Ler artigo",
+    "readingTime": "{minutes} min de leitura",
+    "publishedAt": "Publicado em",
+    "allCategories": "Todos",
+    "noPosts": "Nenhum post publicado ainda. Volte em breve.",
+    "backToBlog": "← Voltar ao blog",
+    "relatedPosts": "Posts relacionados",
+    "ctaTitle": "Pronto para aparecer no Google?",
+    "ctaDescription": "Diagnóstico gratuito — sem compromisso.",
+    "ctaButton": "Falar no WhatsApp",
+    "authorBy": "Por",
+    "categoryLabel": "Categoria"
   }
 }
