@@ -8,7 +8,7 @@ Site institucional da [Nasus Digital](https://nasus.digital) — presença digit
 - **Tailwind CSS v4**
 - **GSAP 3** (SplitText, ScrollTrigger)
 - **next-intl** — i18n pt-BR / en
-- **Sanity** — CMS headless para o blog (projeto `uvt7mk2r`, dataset `production`)
+- **Sanity** — CMS headless para o blog (projeto `csj6iko2`, dataset `production`)
 - **Vercel** (deploy) · DNS na Hostinger
 
 ## Dev
@@ -34,7 +34,7 @@ Posts gerenciados via [sanity.io/manage](https://sanity.io/manage) ou pelo MCP d
 Novos posts publicados no Sanity aparecem automaticamente sem redeploy (dentro do intervalo de revalidação).
 
 **Env vars necessárias:**
-- `NEXT_PUBLIC_SANITY_PROJECT_ID` — `uvt7mk2r`
+- `NEXT_PUBLIC_SANITY_PROJECT_ID` — `csj6iko2`
 - `NEXT_PUBLIC_SANITY_DATASET` — `production`
 - `SANITY_API_READ_TOKEN` — token de leitura (Sanity → API → Tokens)
 
@@ -87,7 +87,7 @@ Secrets necessários no GitHub (`Settings → Secrets → Actions`):
 
 Variáveis de ambiente na Vercel (`Project → Settings → Environment Variables`):
 - `NEXT_PUBLIC_SENTRY_DSN` — DSN do projeto Sentry (não marcar como Sensitive — é público por design, vai no bundle do browser)
-- `NEXT_PUBLIC_SANITY_PROJECT_ID` — `uvt7mk2r`
+- `NEXT_PUBLIC_SANITY_PROJECT_ID` — `csj6iko2`
 - `NEXT_PUBLIC_SANITY_DATASET` — `production`
 - `SANITY_API_READ_TOKEN` — token de leitura do Sanity
 
