@@ -69,7 +69,7 @@ export default async function BlogPage() {
           <div className="max-w-6xl mx-auto">
             {posts.length === 0 ? (
               <div className="flex flex-col items-start gap-1 pb-24">
-                <span className="font-display text-3xl italic text-text-muted">Em breve</span>
+                <span className="font-display text-3xl italic text-text-muted">{t('comingSoon')}</span>
                 <p className="text-sm text-text-muted">{t('noPosts')}</p>
               </div>
             ) : (
