@@ -70,7 +70,7 @@ export function Header() {
   }, []);
 
   function switchLocale() {
-    router.replace("/", { locale: isEn ? "pt" : "en" });
+    router.replace(pathname, { locale: isEn ? "pt" : "en" });
   }
 
   function onLogoClick(e: React.MouseEvent<HTMLAnchorElement>) {
