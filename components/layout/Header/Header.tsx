@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from "./Header.module.css";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, useRouter, usePathname } from "@/navigation";
+import { useLocaleAlternate } from "@/components/locale-alternate-provider";
 import { Button } from "@/components/ui/Button";
 import { BookButton } from "@/components/ui/BookButton";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
@@ -24,6 +25,7 @@ export function Header() {
   const pathname = usePathname();
   const isEn = locale === "en";
 
+  const alternateHref = useLocaleAlternate()
   const [hidden, setHidden] = useState(false);
   const [activeId, setActiveId] = useState<string>("");
   const lastYRef = useRef(0);
@@ -70,7 +72,7 @@ export function Header() {
   }, []);
 
   function switchLocale() {
-    router.replace(pathname, { locale: isEn ? "pt" : "en" });
+    router.replace(alternateHref ?? pathname, { locale: isEn ? "pt" : "en" });
   }
 
   function onLogoClick(e: React.MouseEvent<HTMLAnchorElement>) {

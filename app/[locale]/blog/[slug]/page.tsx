@@ -5,7 +5,8 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { PortableTextRenderer } from '@/components/blog/PortableTextRenderer'
 import { PostCard } from '@/components/blog/PostCard'
-import { getPostBySlug, getAllPostSlugs, getAllPosts, getAllCategories } from '@/lib/sanity/queries'
+import { getPostBySlug, getAllPostSlugs, getAllPosts, getAllCategories, getTranslatedSlug } from '@/lib/sanity/queries'
+import { LocaleAlternateProvider } from '@/components/locale-alternate-provider'
 import { urlFor } from '@/lib/sanity/image'
 import { Link } from '@/navigation'
 import { WA_DIAGNOSTIC } from '@/lib/whatsapp'
@@ -62,6 +63,12 @@ export default async function PostPage({ params }: Props) {
   const post = await getPostBySlug(slug, locale)
   if (!post) notFound()
 
+  const targetLocale = locale === 'pt' ? 'en' : 'pt'
+  const translatedSlug = post.translationKey
+    ? await getTranslatedSlug(post.translationKey, targetLocale)
+    : null
+  const alternateHref = translatedSlug ? `/blog/${translatedSlug}` : '/blog'
+
   const [allPosts, categories] = await Promise.all([
     getAllPosts(locale),
     getAllCategories(locale),
@@ -106,7 +113,7 @@ export default async function PostPage({ params }: Props) {
   }
 
   return (
-    <>
+    <LocaleAlternateProvider href={alternateHref}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -241,6 +248,6 @@ export default async function PostPage({ params }: Props) {
         )}
       </main>
       <Footer />
-    </>
+    </LocaleAlternateProvider>
   )
 }

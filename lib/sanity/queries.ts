@@ -26,10 +26,18 @@ export async function getPostBySlug(slug: string, language: string): Promise<Pos
   return client.fetch(
     `*[_type == "post" && slug.current == $slug && language == $language][0] {
       _id, _type, title, slug, language, publishedAt, excerpt, coverImage { asset, alt },
-      body, categories[]-> { _id, title, slug, description, language }, readingTime
+      body, categories[]-> { _id, title, slug, description, language }, readingTime, translationKey
     }`,
     { slug, language }
   )
+}
+
+export async function getTranslatedSlug(translationKey: string, language: string): Promise<string | null> {
+  const result = await client.fetch(
+    `*[_type == "post" && translationKey == $translationKey && language == $language][0].slug.current`,
+    { translationKey, language }
+  )
+  return result ?? null
 }
 
 export async function getPostsByCategory(categorySlug: string, language: string): Promise<PostSummary[]> {

@@ -24,6 +24,7 @@ export interface Post {
   body: unknown[]
   categories?: Category[]
   readingTime?: number
+  translationKey?: string
 }
 
 export interface PostSummary {
