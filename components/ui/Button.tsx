@@ -9,6 +9,7 @@ interface ButtonProps {
   className?: string;
   children: React.ReactNode;
   external?: boolean;
+  'aria-label'?: string;
 }
 
 const variants: Record<Variant, string> = {
@@ -32,6 +33,7 @@ export function Button({
   className = "",
   children,
   external = false,
+  'aria-label': ariaLabel,
 }: ButtonProps) {
   const classes = `${base} ${variants[variant]} ${className}`;
 
@@ -40,6 +42,7 @@ export function Button({
       <Link
         href={href}
         className={classes}
+        aria-label={ariaLabel}
         {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
         {children}
@@ -48,7 +51,7 @@ export function Button({
   }
 
   return (
-    <button onClick={onClick} className={classes}>
+    <button onClick={onClick} className={classes} aria-label={ariaLabel}>
       {children}
     </button>
   );

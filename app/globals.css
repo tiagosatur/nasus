@@ -18,7 +18,7 @@
   /* Text — light surfaces */
   --color-text-primary: #1C0F14;
   --color-text-secondary: #5C3A45;
-  --color-text-muted: #85606F;
+  --color-text-muted: #7A5A68;
 
   /* Text — dark/terra surfaces */
   --color-text-inverse: #FAF0F2;
@@ -273,7 +273,7 @@ body {
 
   --color-text-primary:        #111111;
   --color-text-secondary:      #444444;
-  --color-text-muted:          #888888;
+  --color-text-muted:          #717171;
 
   --color-text-inverse:        #F7F7F5;
   --color-text-inverse-muted:  #777777;
