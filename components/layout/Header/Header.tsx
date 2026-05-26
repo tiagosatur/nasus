@@ -73,6 +73,7 @@ export function Header() {
 
   function switchLocale() {
     router.replace(alternateHref ?? pathname, { locale: isEn ? "pt" : "en" });
+    if (pathname === '/') window.scrollTo({ top: 0, behavior: 'instant' });
   }
 
   function onLogoClick(e: React.MouseEvent<HTMLAnchorElement>) {
