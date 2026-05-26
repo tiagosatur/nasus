@@ -64,7 +64,7 @@ export function PostCard({ post, locale, variant = 'editorial' }: PostCardProps)
             )}
           </div>
 
-          <span className="relative z-10 inline-flex items-center gap-1.5 text-sm font-medium text-accent group-hover:gap-3 transition-all duration-200" aria-hidden>
+          <span className="pointer-events-none relative z-10 inline-flex items-center gap-1.5 text-sm font-medium text-accent group-hover:gap-3 transition-all duration-200" aria-hidden>
             {t('readMore')}
             <span>→</span>
           </span>
