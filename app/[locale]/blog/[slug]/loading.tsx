@@ -1,8 +1,9 @@
+import React from 'react'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 
-function Bone({ className = '' }: { className?: string }) {
-  return <div className={`bg-bg-secondary rounded-sm animate-pulse ${className}`} />
+function Bone({ className = '', style }: { className?: string; style?: React.CSSProperties }) {
+  return <div className={`bg-bg-secondary rounded-sm animate-pulse ${className}`} style={style} />
 }
 
 export default function PostLoading() {
@@ -30,9 +31,9 @@ export default function PostLoading() {
         </header>
 
         {/* Cover image */}
-        <div className="w-full bg-bg-secondary">
+        <div className="px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
-            <div className="w-full aspect-[2/1] bg-bg-secondary animate-pulse" />
+            <div className="w-full aspect-[2.5/1] bg-bg-secondary rounded-sm animate-pulse" />
           </div>
         </div>
 
