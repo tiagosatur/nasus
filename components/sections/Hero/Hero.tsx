@@ -54,7 +54,7 @@ export async function Hero() {
 
           <span
             data-hero-accent
-            className="accent-line block my-8 max-w-[160px]"
+            className="accent-line block my-8 max-w-[160px] scale-x-0"
             aria-hidden="true"
           />
 
