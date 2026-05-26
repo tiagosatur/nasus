@@ -72,7 +72,7 @@ export function Header() {
   }, []);
 
   function switchLocale() {
-    router.replace(alternateHref ?? pathname, { locale: isEn ? "pt" : "en" });
+    router.replace(alternateHref ?? pathname, { locale: isEn ? "pt" : "en", scroll: false });
   }
 
   function onLogoClick(e: React.MouseEvent<HTMLAnchorElement>) {
