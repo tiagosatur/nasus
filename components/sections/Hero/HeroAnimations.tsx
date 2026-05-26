@@ -37,25 +37,25 @@ export function HeroAnimations() {
       gsap.set(split2.chars, { opacity: 0, y: 28 });
     }
 
-    const tl = gsap.timeline({ delay: 0.2 });
+    const tl = gsap.timeline();
 
-    tl.to(q("[data-hero-label]"), { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" });
+    tl.to(q("[data-hero-label]"), { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" });
 
     if (split1) {
-      tl.to(split1.chars, { opacity: 1, y: 0, stagger: 0.02, duration: 0.7, ease: "expo.out" }, "-=0.2");
+      tl.to(split1.chars, { opacity: 1, y: 0, stagger: 0.015, duration: 0.5, ease: "expo.out" }, "-=0.1");
     }
     if (split2) {
-      tl.to(split2.chars, { opacity: 1, y: 0, stagger: 0.016, duration: 0.7, ease: "expo.out" }, "-=0.5");
+      tl.to(split2.chars, { opacity: 1, y: 0, stagger: 0.012, duration: 0.5, ease: "expo.out" }, "-=0.4");
     }
 
-    tl.to(q("[data-hero-accent]"), { scaleX: 1, duration: 0.9, ease: "expo.out" }, "-=0.4");
-    if (sub) tl.to(sub, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, "-=0.5");
-    tl.to(q("[data-hero-cta]"), { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, "-=0.4");
+    tl.to(q("[data-hero-accent]"), { scaleX: 1, duration: 0.7, ease: "expo.out" }, "-=0.3");
+    if (sub) tl.to(sub, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, "-=0.4");
+    tl.to(q("[data-hero-cta]"), { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, "-=0.3");
     tl.fromTo(
       q("[data-hero-mockup]"),
       { opacity: 0, x: 24 },
-      { opacity: 1, x: 0, duration: 0.9, ease: "power2.out" },
-      "-=0.9"
+      { opacity: 1, x: 0, duration: 0.7, ease: "power2.out" },
+      "-=0.7"
     );
   });
 

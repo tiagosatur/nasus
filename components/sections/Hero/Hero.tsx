@@ -28,8 +28,7 @@ export async function Hero() {
       <div className="relative w-full max-w-6xl mx-auto">
       <p
         data-hero-label
-        className="text-xs uppercase tracking-[0.2em] text-text-muted font-mono mb-10 flex items-center gap-3"
-        style={{ opacity: 0 }}
+        className="text-xs uppercase tracking-[0.2em] text-text-muted font-mono mb-10 flex items-center gap-3 opacity-0"
       >
         <span className="inline-block w-5 h-px bg-accent" aria-hidden="true" />
         {t("label")}
@@ -38,16 +37,17 @@ export async function Hero() {
       <div className="grid lg:grid-cols-[68fr_32fr] gap-12 lg:gap-10 items-start">
         <div>
           <h1
+            aria-label={`${t("line1")} ${t("line2")}`}
             className="leading-[1.05] lg:leading-[0.97] mb-4"
             style={{
               fontSize: "clamp(1.875rem, 4vw, 4rem)",
               hyphens: "none",
             }}
           >
-            <span data-hero-line1 className="block font-sans font-bold text-text-primary" style={{ opacity: 0 }}>
+            <span data-hero-line1 aria-hidden="true" className="block font-sans font-bold text-text-primary opacity-0">
               {t("line1")}
             </span>
-            <span data-hero-line2 className="block font-display italic text-accent" style={{ opacity: 0 }}>
+            <span data-hero-line2 aria-hidden="true" className="block font-display italic text-accent opacity-0">
               {t("line2")}
             </span>
           </h1>
@@ -58,11 +58,11 @@ export async function Hero() {
             aria-hidden="true"
           />
 
-          <p data-hero-sub className="text-text-secondary text-lg md:text-xl max-w-md leading-[1.65] mb-10" style={{ opacity: 0 }}>
+          <p data-hero-sub className="text-text-secondary text-lg md:text-xl max-w-md leading-[1.65] mb-10 opacity-0">
             {t("sub")}
           </p>
 
-          <div data-hero-cta className="flex flex-col sm:flex-row gap-3" style={{ opacity: 0 }}>
+          <div data-hero-cta className="flex flex-col sm:flex-row gap-3 opacity-0">
             {isEn ? (
               <BookButton variant="dark">{t("cta1")}</BookButton>
             ) : (
@@ -77,7 +77,7 @@ export async function Hero() {
           </div>
         </div>
 
-        <div data-hero-mockup className="hidden lg:block" style={{ opacity: 0 }}>
+        <div data-hero-mockup className="hidden lg:block opacity-0">
           <SearchMockup />
         </div>
       </div>
