@@ -42,7 +42,7 @@ export function PostCard({ post, locale, variant = 'editorial' }: PostCardProps)
             {/* stretched link: after covers the entire card */}
             <Link
               href={href}
-              className="after:absolute after:inset-0 after:content-['']"
+              className="after:absolute after:inset-0 after:content-[''] after:z-[1]"
             >
               {post.title}
             </Link>
@@ -121,7 +121,7 @@ export function PostCard({ post, locale, variant = 'editorial' }: PostCardProps)
         <h2 className="font-display text-xl md:text-2xl text-text-primary leading-snug group-hover:text-accent transition-colors duration-200">
           <Link
             href={href}
-            className="after:absolute after:inset-0 after:content-['']"
+            className="after:absolute after:inset-0 after:content-[''] after:z-[1]"
           >
             {post.title}
           </Link>
