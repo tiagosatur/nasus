@@ -102,10 +102,11 @@ export function Header() {
         <nav className="hidden md:flex items-center justify-center gap-8">
           {NAV_IDS.map(({ id, anchor }) => {
             const isActive = activeId === id;
+            const href = pathname === "/" ? anchor : `/${anchor}`;
             return (
               <a
                 key={id}
-                href={anchor}
+                href={href}
                 className={`text-sm transition-colors duration-200 pb-0.5 ${isActive
                   ? "text-accent border-b border-accent"
                   : "text-text-secondary hover:text-text-primary"

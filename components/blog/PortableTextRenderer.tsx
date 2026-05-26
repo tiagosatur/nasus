@@ -152,7 +152,7 @@ const components = {
       </p>
     ),
     blockquote: ({ children }: { children?: React.ReactNode }) => (
-      <blockquote className="border-l-4 border-accent pl-5 my-6 italic text-text-secondary">
+      <blockquote className="border-l-4 border-accent pl-5 my-6 italic text-text-secondary break-words">
         {children}
       </blockquote>
     ),
@@ -197,7 +197,7 @@ const components = {
 export function PortableTextRenderer({ body }: { body: unknown[] }) {
   const processed = preprocessBody(body)
   return (
-    <div className="prose-nasus">
+    <div className="prose-nasus break-words">
       <PortableText value={processed as Parameters<typeof PortableText>[0]['value']} components={components} />
     </div>
   )

@@ -187,7 +187,7 @@ export default async function PostPage({ params }: Props) {
               {/* Author bio */}
               <div className="mt-16 pt-8 border-t border-border flex gap-4 items-start">
                 <Image
-                  src="/tiago.png"
+                  src="/tiago-profile.png"
                   alt="Tiago Satur"
                   width={56}
                   height={56}
