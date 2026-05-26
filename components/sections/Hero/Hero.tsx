@@ -29,6 +29,7 @@ export async function Hero() {
       <p
         data-hero-label
         className="text-xs uppercase tracking-[0.2em] text-text-muted font-mono mb-10 flex items-center gap-3"
+        style={{ opacity: 0 }}
       >
         <span className="inline-block w-5 h-px bg-accent" aria-hidden="true" />
         {t("label")}
@@ -43,10 +44,10 @@ export async function Hero() {
               hyphens: "none",
             }}
           >
-            <span data-hero-line1 className="block font-sans font-bold text-text-primary">
+            <span data-hero-line1 className="block font-sans font-bold text-text-primary" style={{ opacity: 0 }}>
               {t("line1")}
             </span>
-            <span data-hero-line2 className="block font-display italic text-accent">
+            <span data-hero-line2 className="block font-display italic text-accent" style={{ opacity: 0 }}>
               {t("line2")}
             </span>
           </h1>
@@ -57,11 +58,11 @@ export async function Hero() {
             aria-hidden="true"
           />
 
-          <p className="text-text-secondary text-lg md:text-xl max-w-md leading-[1.65] mb-10">
+          <p data-hero-sub className="text-text-secondary text-lg md:text-xl max-w-md leading-[1.65] mb-10" style={{ opacity: 0 }}>
             {t("sub")}
           </p>
 
-          <div data-hero-cta className="flex flex-col sm:flex-row gap-3">
+          <div data-hero-cta className="flex flex-col sm:flex-row gap-3" style={{ opacity: 0 }}>
             {isEn ? (
               <BookButton variant="dark">{t("cta1")}</BookButton>
             ) : (
