@@ -127,6 +127,12 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3 sm:gap-4 justify-self-end">
+          <Link
+            href="/blog"
+            className="md:hidden text-xs text-text-secondary hover:text-text-primary transition-colors duration-200"
+          >
+            {t("nav.blog")}
+          </Link>
           <button
             onClick={switchLocale}
             className="text-xs font-mono text-text-muted hover:text-text-primary transition-colors duration-200"

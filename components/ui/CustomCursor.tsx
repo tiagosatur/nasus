@@ -8,7 +8,7 @@ export function CustomCursor() {
   const dotRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (window.matchMedia("(hover: none)").matches) return;
+    if (!window.matchMedia("(hover: hover) and (min-width: 768px)").matches) return;
 
     const cursor = cursorRef.current!;
     const dot = dotRef.current!;
@@ -75,13 +75,13 @@ export function CustomCursor() {
     <>
       <div
         ref={cursorRef}
-        className="fixed top-0 left-0 w-10 h-10 rounded-full border pointer-events-none z-[99999] opacity-0 transition-[border-color] duration-300"
+        className="hidden md:block fixed top-0 left-0 w-10 h-10 rounded-full border pointer-events-none z-[99999] opacity-0 transition-[border-color] duration-300"
         style={{ borderColor: "rgba(28,21,18,0.2)" }}
         aria-hidden="true"
       />
       <div
         ref={dotRef}
-        className="fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-accent pointer-events-none z-[99999] opacity-0"
+        className="hidden md:block fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-accent pointer-events-none z-[99999] opacity-0"
         aria-hidden="true"
       />
     </>
