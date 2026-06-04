@@ -31,28 +31,35 @@ function localizedPath(locale: string, path: string): string {
 }
 
 /**
- * Expande as rotas estáticas em entradas de sitemap, pareando pt ↔ en
- * via hreflang. `x-default` aponta pra pt porque é o idioma padrão do site
- * e o público primário é brasileiro — o Google usa essa pista quando o
+ * Expande as rotas estáticas em entradas de sitemap, emitindo **uma entrada
+ * por idioma** (pt + en) para cada rota — o Google recomenda que cada
+ * variação tenha seu próprio `<loc>` declarando os hreflang completos
+ * (incluindo a si mesma). Sem isso, versões en podem demorar a ser
+ * descobertas/indexadas.
+ *
+ * `x-default` aponta pra pt porque é o idioma padrão do site e o público
+ * primário é brasileiro — sinaliza ao Google qual versão servir quando o
  * usuário não tem preferência clara de idioma.
  */
 function staticEntries(now: Date): MetadataRoute.Sitemap {
-  return STATIC_ROUTES.map(({ path, priority, changeFrequency }) => {
+  return STATIC_ROUTES.flatMap(({ path, priority, changeFrequency }) => {
     const ptUrl = localizedPath("pt", path);
     const enUrl = localizedPath("en", path);
-    return {
-      url: ptUrl,
+    const languages = {
+      "pt-BR": ptUrl,
+      en: enUrl,
+      "x-default": ptUrl,
+    };
+    const base = {
       lastModified: now,
       changeFrequency,
       priority,
-      alternates: {
-        languages: {
-          "pt-BR": ptUrl,
-          en: enUrl,
-          "x-default": ptUrl,
-        },
-      },
+      alternates: { languages },
     };
+    return [
+      { url: ptUrl, ...base },
+      { url: enUrl, ...base },
+    ];
   });
 }
 
