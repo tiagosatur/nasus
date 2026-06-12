@@ -9,7 +9,8 @@ Site institucional da [Nasus Digital](https://nasus.digital) — presença digit
 - **GSAP 3** (SplitText, ScrollTrigger)
 - **next-intl** — i18n pt-BR / en
 - **Sanity** — CMS headless para o blog (projeto `csj6iko2`, dataset `production`)
-- **Vercel** (deploy) · DNS na Hostinger
+- **Vercel** (deploy + DNS) · Registrar na Hostinger
+- **Better Stack** — uptime monitoring multi-região (3 min)
 
 ## Dev
 
@@ -75,7 +76,7 @@ public/
 
 ## Deploy
 
-GitHub Actions → Vercel (free tier). DNS na Hostinger.
+GitHub Actions → Vercel (free tier). DNS gerenciado pela Vercel (`ns1.vercel-dns.com` / `ns2.vercel-dns.com`); registrar na Hostinger.
 
 - Push para `main` → deploy em produção (`nasus.digital`)
 - Pull request → deploy de preview
@@ -95,6 +96,8 @@ Fluxo: `pnpm install` → `vercel pull` → `vercel build` → `vercel deploy --
 
 Serviços:
 - Sentry: https://nasus-digital.sentry.io
-- https://www.sanity.io
+- Sanity: https://www.sanity.io
 - Google Search Console (GSC): https://search.google.com/search-console
 - Vercel: https://vercel.com/tiagosaturs-projects/nasus
+- Better Stack (uptime): https://betterstack.com/uptime
+- Hostinger (registrar do domínio): https://hpanel.hostinger.com
