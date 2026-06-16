@@ -13,14 +13,12 @@ const GPT = {
   accent: "#7B1F3A",
 } as const;
 
-type PainPoint = { num: string; impact: string; text: string };
 type GoogleResult = { domain: string; title: string };
 
 export function Problem() {
   const t = useTranslations("problem");
   const sectionRef = useRef<HTMLElement>(null);
 
-  const painPoints = t.raw("painPoints") as PainPoint[];
   const googleResults = t.raw("googleResults") as GoogleResult[];
   const aiNames = t.raw("aiNames") as string[];
 
@@ -37,16 +35,6 @@ export function Problem() {
         scrollTrigger: { trigger: sectionRef.current, start: "top 70%" },
       });
 
-      const points = sectionRef.current!.querySelectorAll("[data-point]");
-      gsap.from(points, {
-        opacity: 0,
-        y: 28,
-        stagger: 0.15,
-        duration: 0.7,
-        ease: "power2.out",
-        scrollTrigger: { trigger: sectionRef.current, start: "top 55%" },
-      });
-
       const channels = sectionRef.current!.querySelectorAll("[data-channel]");
       gsap.from(channels, {
         opacity: 0,
@@ -54,7 +42,7 @@ export function Problem() {
         stagger: 0.12,
         duration: 0.6,
         ease: "power2.out",
-        scrollTrigger: { trigger: sectionRef.current, start: "top 30%" },
+        scrollTrigger: { trigger: sectionRef.current, start: "top 45%" },
       });
     },
     { scope: sectionRef }
@@ -80,53 +68,20 @@ export function Problem() {
             {t("headline")}
             <span className="text-accent-on-dark">{t("headlineAccent")}</span>
           </h2>
+          <p
+            className="font-display italic text-text-inverse leading-[1.3] max-w-2xl mt-10 md:mt-12 opacity-90"
+            style={{ fontSize: "clamp(1.25rem, 2.2vw, 1.75rem)" }}
+          >
+            {t("bridge")}
+            <span className="text-accent-on-dark">{t("bridgeAccent")}</span>
+          </p>
         </div>
 
-        <div className="border-t border-border-dark mb-16 md:mb-20">
-          {painPoints.map((point) => (
-            <div
-              key={point.num}
-              data-point
-              className="grid grid-cols-[1fr_auto] items-center gap-8 md:gap-16 py-10 border-b border-border-dark last:border-b-0"
-            >
-              <div className="flex gap-6 md:gap-10 items-start">
-                <span className="font-mono text-xs text-text-inverse-muted mt-2 flex-shrink-0 w-6">
-                  {point.num}
-                </span>
-                <p
-                  className="font-sans font-bold text-text-inverse leading-[1.15]"
-                  style={{ fontSize: "clamp(1.2rem, 2.2vw, 1.75rem)" }}
-                >
-                  {point.text}
-                </p>
-              </div>
-              <p
-                className="font-display italic text-accent-on-dark text-right leading-none flex-shrink-0 hidden sm:block"
-                style={{ fontSize: "clamp(2.5rem, 4vw, 4rem)" }}
-              >
-                {point.impact}
-              </p>
-            </div>
-          ))}
-        </div>
+        <div className="flex flex-col gap-10 pt-4 md:pt-6">
 
-        <div className="flex flex-col gap-12 pt-12 md:pt-16 -mx-6 md:-mx-12 lg:-mx-24 px-6 md:px-12 lg:px-24 border-t border-border-dark">
-
-          <div>
-            <p
-              className="font-sans font-bold text-text-inverse leading-[1.1] max-w-2xl"
-              style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.75rem)" }}
-            >
-              {t("bridge")}
-              <span className="text-accent-on-dark">{t("bridgeAccent")}</span>
-            </p>
-            <p className="text-text-inverse text-base mt-4 max-w-xl leading-relaxed opacity-80">
-              {t("bridgeSub")}
-            </p>
-            <p className="text-text-inverse text-sm mt-6 opacity-50">
-              {t("channelsIntro")}
-            </p>
-          </div>
+          <p className="text-text-inverse text-sm opacity-50">
+            {t("channelsIntro")}
+          </p>
 
           <div className="grid md:grid-cols-2 gap-10 md:gap-14">
 

@@ -29,6 +29,9 @@
   --color-accent-on-dark: #BE405F;
   --color-accent-muted: #F5D5DE;
 
+  /* Success — mockup highlights (sage, harmonizes with cream + terracota) */
+  --color-success-muted: #C5DBA9;
+
   /* Borders */
   --color-border: #DDD8D6;
 

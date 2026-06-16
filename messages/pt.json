@@ -56,26 +56,8 @@
     "sectionLabel": "O Problema",
     "headline": "Hoje à tarde, alguém na sua cidade buscou o seu serviço.",
     "headlineAccent": " E ligou para o concorrente.",
-    "painPoints": [
-      {
-        "num": "01",
-        "impact": "Refém",
-        "text": "Você vive de indicação. Quando para de indicar, para de chegar."
-      },
-      {
-        "num": "02",
-        "impact": "Invisível",
-        "text": "Já pesquisou seu próprio serviço no Google. Sabe o que achou — e o que não achou."
-      },
-      {
-        "num": "03",
-        "impact": "Desperdiçado",
-        "text": "Já pagou agência ou apostou no Instagram. Veio curtida. Não veio cliente."
-      }
-    ],
     "bridge": "Não é falta de competência.",
     "bridgeAccent": " É falta de presença.",
-    "bridgeSub": "Seu concorrente não é necessariamente melhor. Só aparece quando seu cliente busca — e você não.",
     "channelsIntro": "Nos dois lugares onde seu cliente busca hoje:",
     "googleChannel": "Google Search",
     "aiChannel": "Inteligência Artificial",
@@ -97,36 +79,49 @@
     "aeo": "AEO,"
   },
   "solution": {
-    "sectionLabel": "A Solução",
-    "headline": "Um sistema completo de presença digital.",
-    "tagline": "Cada camada funciona sozinha — e ainda melhor em conjunto.",
-    "cards": [
+    "sectionLabel": "Onde você aparece",
+    "headline": "Onde seu próximo cliente está procurando você agora.",
+    "tagline": "Três lugares. Três decisões diferentes. Um site só não resolve nenhuma delas.",
+    "closer": "Maps, Google e IA —",
+    "closerAccent": " a nasus te posiciona nos três.",
+    "you": "você",
+    "competitorA": "Concorrente A",
+    "competitorB": "Concorrente B",
+    "citedBadge": "citado",
+    "surfaces": [
       {
+        "type": "maps",
         "num": "01",
-        "label": "Fundação",
-        "title": "Um site que trabalha enquanto você atende",
-        "body": "Profissional, rápido e otimizado. PageSpeed 95+ garantido, responsivo em todos os dispositivos. A base que credencia tudo o que vem depois.",
-        "tags": ["PageSpeed 95+", "Mobile-first", "SSL + segurança"],
-        "resultLabel": "Resultado",
-        "result": "Quem chega ao site fica e entra em contato."
+        "label": "No Maps",
+        "title": "O cliente do mapa não pesquisa. Ele liga.",
+        "body": "Quem busca um serviço perto liga pra quem está no topo do mapa. Não pra quem é melhor.",
+        "query": "estética em curitiba",
+        "resultLabel": "Vira",
+        "result": "Cliente que decide em 5 minutos."
       },
       {
+        "type": "search",
         "num": "02",
-        "label": "Descoberta",
-        "title": "Na frente do concorrente no momento que importa",
-        "body": "SEO local e Google Meu Negócio para você aparecer na busca e no mapa — os dois lugares onde alguém que precisa do seu serviço decide quem vai ligar.",
-        "tags": ["SEO local", "Google Meu Negócio", "Google Maps"],
-        "resultLabel": "Resultado",
-        "result": "Seu nome antes do concorrente no momento de maior intenção de compra."
+        "label": "No Google",
+        "title": "Antes de te ligar, ele compara seu site com outros três.",
+        "body": "Ele já decidiu contratar. Falta escolher com quem. Site sério ganha — e site genérico desaparece.",
+        "query": "advogado trabalhista são paulo",
+        "yourDomain": "seusite.com.br",
+        "yourTitle": "Atendimento profissional — referência no que você faz",
+        "yourSnippet": "Sua proposta de valor aparece aqui, junto com avaliações reais e contato direto.",
+        "resultLabel": "Vira",
+        "result": "Cliente que comparou três e escolheu você."
       },
       {
+        "type": "ai",
         "num": "03",
-        "label": "Autoridade",
-        "title": "Você vira referência na sua cidade.",
-        "body": "AEO para que ChatGPT, Gemini e Claude te citem como referência. Otimização contínua com relatório mensal para crescer sem parar.",
-        "tags": ["AEO para IAs", "Relatório mensal", "Otimização contínua"],
-        "resultLabel": "Resultado",
-        "result": "Ser recomendado mesmo por quem ainda não te conhece."
+        "label": "No ChatGPT",
+        "title": "Ele pergunta pra IA. Só liga pra quem ela cita.",
+        "body": "Quando alguém pergunta qual a melhor opção, a IA responde com 3 nomes. O seu precisa estar lá.",
+        "query": "Qual o melhor dentista em Florianópolis?",
+        "answer": "Três nomes que aparecem com mais frequência:",
+        "resultLabel": "Vira",
+        "result": "Cliente que nem te conhece e já te confia."
       }
     ]
   },
