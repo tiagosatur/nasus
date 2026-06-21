@@ -29,15 +29,18 @@ export function LinkInBio({ locale }: { locale: string }) {
 
   return (
     <main
-      className="links-page relative min-h-dvh flex flex-col items-center justify-start px-6 pt-[7vh] pb-14"
+      className="links-page relative min-h-dvh flex flex-col items-center justify-start px-6 pt-[4vh] pb-14"
       style={{ backgroundImage: "radial-gradient(circle at 50% 12%, color-mix(in srgb, var(--color-accent) 5%, transparent), transparent 45%)" }}
     >
+      {/* Sem JS o GSAP nunca revela os elementos escondidos pelo CSS anti-FOUC */}
+      <noscript>
+        <style>{".links-page [data-lockup],.links-page [data-head],.links-page [data-search],.links-page [data-results],.links-page [data-link],.links-page [data-socials],.links-page [data-foot]{opacity:1!important}.links-page [data-line]{transform:none!important}"}</style>
+      </noscript>
       <div ref={root} className="w-full max-w-[360px] flex flex-col items-center">
         {/* Lockup em linha */}
         <div data-lockup className="text-center">
           <span className="font-display text-[38px] leading-none text-accent">Nasus</span>
           <span className="font-display text-[20px] leading-none text-text-primary">.digital</span>
-          <p className="mt-2 text-[13px] text-[var(--links-handle)]">{t("handle")}</p>
         </div>
 
         {/* Headline + linha */}

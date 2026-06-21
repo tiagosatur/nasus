@@ -203,6 +203,25 @@ body {
   --links-shadow-search: 0 4px 14px -10px color-mix(in srgb, var(--color-text-primary) 40%, transparent);
 }
 
+/* Evita o flash (FOUC): os elementos animados pelo useSerpEntrance já nascem
+   escondidos no HTML do servidor, então o GSAP os revela sem que apareçam antes.
+   Só vale quando há motion — em prefers-reduced-motion o hook não roda e tudo
+   fica visível. Sem JS, o <noscript> em LinkInBio reverte isto. */
+@media (prefers-reduced-motion: no-preference) {
+  .links-page [data-lockup],
+  .links-page [data-head],
+  .links-page [data-search],
+  .links-page [data-results],
+  .links-page [data-link],
+  .links-page [data-socials],
+  .links-page [data-foot] {
+    opacity: 0;
+  }
+  .links-page [data-line] {
+    transform: scaleX(0);
+  }
+}
+
 /* ─── Section helpers ────────────────────────────────────────── */
 .section-dark {
   background-color: #1C0F14;
