@@ -185,43 +185,6 @@ body {
   transform-origin: left;
 }
 
-/* ───────────────────────────────────────────────────────────────────
-   /links (link-in-bio) — PALETA PRÓPRIA, INTENCIONALMENTE ISOLADA.
-   Esta página é "diferentona": segue um mock editorial com tons creme/
-   areia que NÃO pertencem ao design system do site. Estes tokens existem
-   só para a página não depender de hex solto no JSX — é um antipattern
-   consciente e local. NÃO reutilizar fora de `.links-page`.
-   Cores do sistema (accent, whatsapp, text) continuam vindo dos tokens
-   globais; aqui ficam apenas os tons que o mock introduz.
-   ─────────────────────────────────────────────────────────────────── */
-.links-page {
-  --links-surface: #FAF8F3;  /* fundo dos cards e da barra de busca */
-  --links-num: #b3a99c;      /* numeração de rank e rótulos */
-  --links-sub: #8a8178;      /* subtítulos dos cards */
-  --links-handle: #9a9085;   /* @handle */
-  --links-shadow: 0 14px 28px -12px color-mix(in srgb, var(--color-accent) 32%, transparent);
-  --links-shadow-search: 0 4px 14px -10px color-mix(in srgb, var(--color-text-primary) 40%, transparent);
-}
-
-/* Evita o flash (FOUC): os elementos animados pelo useSerpEntrance já nascem
-   escondidos no HTML do servidor, então o GSAP os revela sem que apareçam antes.
-   Só vale quando há motion — em prefers-reduced-motion o hook não roda e tudo
-   fica visível. Sem JS, o <noscript> em LinkInBio reverte isto. */
-@media (prefers-reduced-motion: no-preference) {
-  .links-page [data-lockup],
-  .links-page [data-head],
-  .links-page [data-search],
-  .links-page [data-results],
-  .links-page [data-link],
-  .links-page [data-socials],
-  .links-page [data-foot] {
-    opacity: 0;
-  }
-  .links-page [data-line] {
-    transform: scaleX(0);
-  }
-}
-
 /* ─── Section helpers ────────────────────────────────────────── */
 .section-dark {
   background-color: #1C0F14;

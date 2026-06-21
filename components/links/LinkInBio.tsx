@@ -9,6 +9,7 @@ import { SearchBar } from "./SearchBar";
 import { ResultCard, WhatsAppBadge } from "./ResultCard";
 import { SocialLinks } from "./SocialLinks";
 import { SECONDARY_LINKS } from "./data";
+import "./links.css";
 
 /**
  * Link-in-bio como uma página de resultados (SERP): a barra de busca "digita"
