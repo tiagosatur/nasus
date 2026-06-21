@@ -209,5 +209,24 @@
     "ctaButton": "Falar no WhatsApp",
     "authorBy": "Por",
     "categoryLabel": "Categoria"
+  },
+  "links": {
+    "handle": "@nasus.digital",
+    "headline": "Seu trabalho merece <em>ser encontrado.</em>",
+    "searchQuery": "nasus digital",
+    "resultsLabel": "4 resultados",
+    "whatsapp": "Diagnóstico gratuito",
+    "whatsappSub": "Fale no WhatsApp agora",
+    "site": "Ver o site",
+    "siteSub": "nasus.digital",
+    "blog": "Blog",
+    "blogSub": "Guias de presença digital",
+    "call": "Agendar uma conversa",
+    "callSub": "15 min, sem compromisso",
+    "badge": "Comece aqui",
+    "footer": "Feito por um engenheiro. Sem agência no meio.",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "facebook": "Facebook"
   }
 }

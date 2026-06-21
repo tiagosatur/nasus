@@ -209,5 +209,24 @@
     "ctaButton": "Book a free audit",
     "authorBy": "By",
     "categoryLabel": "Category"
+  },
+  "links": {
+    "handle": "@nasus.digital",
+    "headline": "Your work deserves <em>to be found.</em>",
+    "searchQuery": "nasus digital",
+    "resultsLabel": "4 results",
+    "whatsapp": "Free diagnosis",
+    "whatsappSub": "Chat on WhatsApp now",
+    "site": "Visit the site",
+    "siteSub": "nasus.digital",
+    "blog": "Blog",
+    "blogSub": "Digital presence guides",
+    "call": "Book a call",
+    "callSub": "15 min, no commitment",
+    "badge": "Start here",
+    "footer": "Built by an engineer. No agency in between.",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "facebook": "Facebook"
   }
 }
