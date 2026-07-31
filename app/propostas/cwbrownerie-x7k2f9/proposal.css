@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* ─── Tema CWBrownerie (isolado do tema Nasus) ─────────────────── */
+@theme {
+  --color-cream: #FFF2E3;
+  --color-cream-2: #F8ECDA;
+  --color-cream-3: #F1E2CD;
+  --color-cocoa: #452816;
+  --color-cocoa-deep: #2A1710;
+  --color-brown: #734120;
+  --color-camel: #A8845C;
+  --color-gold: #C1971E;
+  --color-gold-soft: #E4C77E;
+  --color-taupe: #756F63;
+  --color-ink: #2A211C;
+  --color-wa: #25D366;
+  --color-wa-dark: #1EBE57;
+
+  --font-display: var(--font-cinzel);
+  --font-body: var(--font-jost);
+
+  --radius-card: 10px;
+}
+
+/* ─── Base ─────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #FFF2E3;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #FFF2E3;
+  color: #2A211C;
+  font-family: var(--font-jost), system-ui, sans-serif;
+  min-height: 100dvh;
+  overflow-x: clip;
+  line-height: 1.6;
+}
+
+.font-display {
+  font-family: var(--font-cinzel), Georgia, serif;
+  letter-spacing: 0.01em;
+}
+
+::selection {
+  background-color: rgba(193, 151, 30, 0.25);
+  color: #452816;
+}
+
+/* ─── Ornamento damasco sutil (fundo creme) ────────────────────── */
+.damask {
+  background-image: radial-gradient(circle at 1px 1px, rgba(117, 111, 99, 0.06) 1px, transparent 0);
+  background-size: 26px 26px;
+}
+
+/* ─── CTA final: brilho dourado sobre cacau ────────────────────── */
+.cta-glow {
+  background-color: #2A1710;
+  background-image:
+    radial-gradient(115% 130% at 50% 0%, rgba(193, 151, 30, 0.30) 0%, rgba(193, 151, 30, 0) 55%),
+    radial-gradient(circle at 1px 1px, rgba(228, 199, 126, 0.05) 1px, transparent 0);
+  background-size: 100% 100%, 26px 26px;
+}
+
+/* ─── WhatsApp: digitando + entrada da mensagem ────────────────── */
+@keyframes wa-blink {
+  0%, 60%, 100% { opacity: 0.25; }
+  30% { opacity: 1; }
+}
+.wa-dot { animation: wa-blink 1.2s infinite; }
+
+@keyframes wa-pop {
+  from { opacity: 0; transform: translateY(6px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+.wa-pop { animation: wa-pop 0.32s ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-dot, .wa-pop { animation: none; }
+}
+
+/* ─── Reveal on scroll ─────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ─── Pulse no total do configurador ───────────────────────────── */
+@keyframes pulse-total {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.13); }
+  100% { transform: scale(1); }
+}
+
+.total-pulse {
+  animation: pulse-total 0.32s ease;
+  transform-origin: right center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .total-pulse {
+    animation: none;
+  }
+}

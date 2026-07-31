@@ -7,6 +7,6 @@ export const config = {
   matcher: [
     // Match all paths except Next.js internals, static files,
     // and the file-based metadata routes (app/icon.tsx, apple-icon.tsx, etc.)
-    "/((?!_next|_vercel|studio|icon|apple-icon|opengraph-image|twitter-image|manifest|robots|sitemap|.*\\..*).*)",
+    "/((?!_next|_vercel|studio|propostas|icon|apple-icon|opengraph-image|twitter-image|manifest|robots|sitemap|.*\\..*).*)",
   ],
 };
