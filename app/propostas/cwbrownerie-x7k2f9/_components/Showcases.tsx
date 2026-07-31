@@ -13,14 +13,15 @@ const ITEMS = [
 ];
 
 const PERIODS = [
-  "Início da manhã",
-  "Final da manhã",
-  "Início da tarde",
-  "Final da tarde",
+  "08:00 às 10:00",
+  "10:00 às 12:00 ",
+  "13:00 às 15:00",
+  "15:00 às 18:00",
 ];
 
 const PAYMENTS = [
   { label: "Pix", mult: 1 },
+  { label: "Dinheiro", mult: 1 },
   { label: "Crédito à vista", mult: 1.05 },
   { label: "Parcelado 3x", mult: 1.125 },
 ];
@@ -38,8 +39,8 @@ type Status = "idle" | "sending" | "sent";
 export function Showcases() {
   const [step, setStep] = useState(0);
   const [sel, setSel] = useState<number[]>([0, 1, 2]);
-  const [de, setDe] = useState("Letícia");
-  const [para, setPara] = useState("Tiago");
+  const [de, setDe] = useState("Tiago");
+  const [para, setPara] = useState("Letícia");
   const [endereco, setEndereco] = useState(
     "Av. do Batel, 1868 - Batel, Curitiba - PR, 80420-090",
   );
