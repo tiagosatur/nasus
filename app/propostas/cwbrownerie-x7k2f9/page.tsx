@@ -70,7 +70,7 @@ function Hero() {
           <div className="mt-5 grid grid-cols-3 gap-3">
             {[
               ["8", "anos em Curitiba"],
-              ["24", "cestas no catálogo"],
+              ["57", "cestas no catálogo"],
               ["5,0", "no Google"],
             ].map(([n, l]) => (
               <div

@@ -24,7 +24,7 @@ Hoje seu site mostra a cesta e o cliente recomeça tudo no WhatsApp: print, ende
 
 **Stats (coluna lateral):**
 - 8 anos entregando em Curitiba
-- 24 cestas no catálogo
+- 57 cestas no catálogo
 - 5,0 no Google
 
 **Depoimento real (Google):**
